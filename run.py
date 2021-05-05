@@ -7,7 +7,7 @@ from vkbottle.keyboard import Keyboard, Text
 
 #Основная группа
 get_data = gf.loadjson("conf.json")
-token = str(get_data['token'])
+token = str(get_data['f76b61f760e817f73ec2978c313d01c3e0fc2dc471e5fa84505f32756fe5b4399591e430213ef41a11e39'])
 
 bot = Bot(token=token)
 users_dir = os.path.join(r"users/")
@@ -18,7 +18,7 @@ cursList = {"coin": '{}'.format(random.randint(5500, 9500))}
 json.dump(cursList, file, ensure_ascii=False)
 file.close()
 
-@bot.on.message()
+@klondike_news()
 async def wrapper(ans: Message):
     check_profile = os.path.exists(users_dir + str(ans.from_id) + ".json")
     if check_profile == True:
